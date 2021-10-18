@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Visualization</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+      <!-- fevicon -->
+      <link rel="icon" href="" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css ') }}">
+      <!-- awesome fontfamily -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+
+      <!--link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"-->
+
+
+
+      <!-- style css -->
+
+      <!-- Responsive-->
+
+      <!-- Scrollbar Custom CSS -->
+
+
+      <!-- Tweaks for older IEs-->
+      <!--[if lt IE 9]-->
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+
+
+
+
+
+
+  </head>
+  <body style="background-color:rgb(255, 255, 255);">
+
+      <!-- end loader -->
+    <div class="wrapper">
+
+      <header class="fixed-top">
+         <!-- header inner -->
+         <div class="container" >
+            <div class="row">
+               <div class="col-lg-3 logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo"> <a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='images/log.png') }}" alt="#"></a> </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-9">
+                  <div class="right_header_info" style="position:relative;">
+                     <ul>
+                        <li><a href="#"><i class="fa fa-phone"></i>987-654-3210</a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i>team7@gmail.com</a></li>
+                        <!--<li><img src="images/search_icon.png" alt="#" /></li>-->
+                         <li>
+                           <button type="button" id="sidebarCollapse">
+                             <i class="fa fa-bars"></i>
+                           </button>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+     </header>
+
+      <div class="nav">
+      <div class="sidebar">
+         <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fa fa-arrow-left"></i>
+            </div>
+
+            <!--ul class="list-unstyled components"-->
+            <ul style="color: black;">
+                <li class="active">
+                    <a href="{{url_for('index')}}">Home</a>
+                </li>
+                <li>
+                    <a href="{{url_for('index')}}#about">About</a>
+                </li>
+                <li>
+                    <a href="{{url_for('index')}}#why_choose_us">Features</a>
+                </li>
+                <li>
+                    <a href="{{url_for('index')}}#testimonial">Testimonial</a>
+                </li>
+                <li>
+                    <a href="{{url_for('index')}}#contact">Contact</a>
+                </li>
+                <li>
+                    <a href="{{url_for('prediction')}}">Prediction</a>
+                </li>
+            </ul>
+
+        </nav>
+      </div>
+
+
+  <div id="content">
+      <section class="text-gray-600 body-font top_sec" style="padding-top:120px;">
+        <div class="container px-2 py-4 mx-auto">
+          <h1 class="text-5xl font-medium title-font text-gray-900 mb-12 text-center"><b>Visualization</b></h1>
+        </div>
+          <section class="text-gray-900 body-font" >
+          <div class="container px-1 py-4 mx-auto">
+            <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+              <div class="p-2 sm:w-1/2 w-full">
+                <div class="bg-red-200 rounded flex p-4 h-full items-center">
+                  <!--<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-bar-chart" viewBox="0 0 16 16">
+  <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+</svg>
+                  <span class="title-font font-medium"><a href="#plot1"><b>1.	Counts of Categorical Data</b></a></span>
+                </div>
+              </div>
+              <div class="p-2 sm:w-1/2 w-full">
+                <div class="bg-red-200 rounded flex p-4 h-full items-center">
+                  <!--<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>-->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-bar-chart" viewBox="0 0 16 16">
+  <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+</svg>
+                  <span class="title-font font-medium"><a href="#plot4"><b>4.	Heatmap of Correlation</b></a></span>
+                </div>
+              </div>
+              <div class="p-2 sm:w-1/2 w-full">
+                <div class="bg-red-200 rounded flex p-4 h-full items-center">
+                  <!--<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-bar-chart" viewBox="0 0 16 16">
+  <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+</svg>
+                  <span class="title-font font-medium"><a href="#plot2"><b>2.	Categorical Data Vs. Price Difference</b></a></span>
+                </div>
+              </div>
+              <div class="p-2 sm:w-1/2 w-full">
+                <div class="bg-red-200 rounded flex p-4 h-full items-center">
+                  <!--<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-bar-chart" viewBox="0 0 16 16">
+  <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+</svg>
+                  <span class="title-font font-medium"><a href="#plot5"><b>5.	Price Difference Vs Km Driven</b></a></span>
+                </div>
+              </div>
+              <div class="p-2 sm:w-1/2 w-full">
+                <div class="bg-red-200 rounded flex p-4 h-full items-center">
+                  <!--<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-bar-chart" viewBox="0 0 16 16">
+  <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+</svg>
+                  <span class="title-font font-medium"><a href="#plot3"><b>3.	Year_old Vs. Selling Price</b></a></span>
+                </div>
+              </div>
+              <div class="p-2 sm:w-1/2 w-full">
+                <div class="bg-red-200 rounded flex p-4 h-full items-center">
+                  <!--<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" class="text-gray-800 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>-->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="black" class="bi bi-bar-chart" viewBox="0 0 16 16">
+  <path d="M4 11H2v3h2v-3zm5-4H7v7h2V7zm5-5v12h-2V2h2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3z"/>
+</svg>
+                  <span class="title-font font-medium"><a href="#plot6"><b>6.	Original Vs Km Prediction</b></a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+
+      <h3></h3>
+      <h3></h3>
+      <h3></h3>
+      <section class="text-gray-600 body-font" id="plot1">
+        <div class="container px-10 py-30 mx-auto flex flex-wrap">
+          <div class="lg:w-2/2 mx-auto">
+            <div class="flex flex-wrap w-full bg-yellow-300 py-25 px-8 relative mb-4">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <!--div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0" id="plot"-->
+          <div>
+            <img class="object-cover object-center rounded" alt="hero" src="{{ url_for('static', filename='images/plot1.png') }}" >
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+              <h1 class="title-font sm:text-1xl text-2xl mb-4 font-medium text-gray-900"><br><b>Counts of Categorical Data</b>
+              <br class="hidden lg:inline-block">
+            </h1>
+            <p class="mb-8 leading-relaxed"><b><b>Values of car which has previous owner of 3 or car with CNG fuel type is extremely low.<br>
+Count of Individual seller type is approximately half of Dealers seller type.<br>
+Count of cars with Automatic Transmission is much lesser than that of Manual Transmission.
+</b></b></p>
+         </div></div></div>
+          </div>
+        </div>
+        </div>
+
+          <div  class="container px-10 py-30 mx-auto flex flex-wrap" id="plot2">
+          <div class="lg:w-2/2 mx-auto">
+            <div class="flex flex-wrap w-full bg-indigo-400 py-25 px-8 relative mb-4">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+         <!-- <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">-->
+            <div><img class="object-cover object-center rounded" alt="hero" src="{{ url_for('static', filename='images/plot2.png') }}">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-1xl text-2xl mb-4 font-medium text-gray-900"><br><b>Categorical Data Vs. Price Difference</b>
+              <br class="hidden lg:inline-block">
+            </h1>
+            <p class="mb-8 leading-relaxed"><b><b>All out categorical data has some sort of pattern regarding car's present price and selling price.<br>
+Difference between the Present price and the Selling Price.
+
+</b></b></p>
+          </div>
+          </div></div></div>
+        </div>
+
+          <div  class="container px-10 py-30 mx-auto flex flex-wrap" id="plot3">
+          <div class="lg:w-2/2 mx-auto">
+            <div class="flex flex-wrap w-full bg-yellow-300 py-25 px-8 relative mb-4">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <!--<div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">-->
+            <div><img class="object-cover object-center rounded" alt="hero" src= "{{ url_for('static', filename='images/plot3.png') }}">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-1xl text-2xl mb-4 font-medium text-gray-900"><br><b>Year_old Vs. Selling Price</b>
+              <br class="hidden lg:inline-block">
+            </h1>
+            <p class="mb-8 leading-relaxed"><b><b>Car Usage in Years and its selling price has negative correlation.<br>
+It’s obvious that as many years car get used value decreases i.e., older the car lesser the Selling Price.
+
+</b></b></p>
+          </div>
+          </div></div></div>
+        </div>
+
+          <div  class="container px-10 py-30 mx-auto flex flex-wrap" id="plot4">
+          <div class="lg:w-2/2 mx-auto">
+            <div class="flex flex-wrap w-full bg-indigo-400 py-25 px-8 relative mb-4">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <!--<div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">-->
+            <div><img class="object-cover object-center rounded" alt="hero" src="{{ url_for('static', filename='images/plot4.png') }}">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-1xl text-2xl mb-4 font-medium text-gray-900"><br><b>Heatmap of Correlation</b>
+              <br class="hidden lg:inline-block">
+            </h1>
+            <p class="mb-8 leading-relaxed"><b><b>Present Price and Selling Price are positively correlated as correlation is 0.88 between them i.e., 88%
+</b></b></p>
+          </div>
+          </div></div></div>
+        </div>
+
+          <div  class="container px-10 py-30 mx-auto flex flex-wrap" id="plot5">
+          <div class="lg:w-2/2 mx-auto">
+            <div class="flex flex-wrap w-full bg-yellow-300 py-25 px-8 relative mb-4">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+            <img class="object-cover object-center rounded" alt="hero" src="{{ url_for('static', filename='images/plot5.png') }}">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-1xl text-2xl mb-4 font-medium text-gray-900"><br><b>Price Difference Vs Km Driven</b>
+              <br class="hidden lg:inline-block">
+            </h1>
+            <p class="mb-8 leading-relaxed"><b><b>Dataset had an outlier, there were two outliers aka values which is rare for our dataset. During prediction these values could make huge diffrences in prediction hence simple solution is just remove them.
+</b></b></p>
+          </div>
+          </div></div></div>
+        </div>
+
+          <div  class="container px-10 py-30 mx-auto flex flex-wrap" id="plot6">
+          <div class="lg:w-2/2 mx-auto">
+            <div class="flex flex-wrap w-full bg-indigo-400 py-25 px-8 relative mb-4">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <!--<div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">-->
+            <div><img class="object-cover object-center rounded" alt="hero" src="{{ url_for('static', filename='images/plot6.png') }}">
+          </div>
+          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 class="title-font sm:text-1xl text-2xl mb-4 font-medium text-gray-900"><br><b>Original Vs Km Prediction</b>
+              <br class="hidden lg:inline-block">
+            </h1>
+            <p class="mb-8 leading-relaxed"><b><br>This is original vs prediction graph built on random forest model , ww can see that original and predictions are close enough. The accuracy is 90 %
+
+
+                <br>r^2 value : 0.9022074564452858
+                <br>mean square error 2.2326900075999996
+                <br>mean absolute error 0.6393053333333333
+                <br>CV score: 1.1298893983989906
+</b></b></p>
+          </div>
+          </div></div></div>
+        </div>
+
+
+
+      </section>
+
+</div>
+
+
+
+    <!-- Javascript files-->
+      <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='js/popper.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap.bundle.min.js') }}" ></script>
+      <!-- Scrollbar Js Files -->
+      <script src="{{ url_for('static',filename='js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='js/custom.js') }}"></script>
+      <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+      </script>
+
+      <script>
+      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+      // Australia.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: 40.645037, lng: -73.880224},
+          });
+
+        var image = 'images/location_point.png';
+          var beachMarker = new google.maps.Marker({
+             position: {lat: 40.645037, lng: -73.880224},
+             map: map,
+             icon: image
+          });
+        }
+        </script>
+        <!-- google map js -->
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+        <!-- end google map js -->
+
+   </body>
+</html>
+

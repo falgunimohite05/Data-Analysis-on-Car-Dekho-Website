@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Team7</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+      <!-- fevicon -->
+      <link rel="icon" href="" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css ') }}">
+      <!-- awesome fontfamily -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <!-- Tweaks for older IEs-->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body>
+      <!-- loader  -->
+
+      <!-- end loader -->
+    <div class="wrapper">
+
+      <header class="fixed-top">
+         <!-- header inner -->
+         <div class="container" >
+            <div class="row">
+               <div class="col-lg-3 logo_section">
+                  <div class="full">
+                     <div class="center-desk">
+                        <div class="logo"> <a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='images/log.png') }}" alt="#"></a> </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-9">
+                  <div class="right_header_info" style="position:relative;">
+                     <ul>
+                        <li><a href="#"><i class="fa fa-phone"></i>987-654-3210</a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i>team7@gmail.com</a></li>
+                        <!--<li><img src="images/search_icon.png" alt="#" /></li>-->
+                         <li>
+                           <button type="button" id="sidebarCollapse">
+                             <i class="fa fa-bars"></i>
+                           </button>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+     </header>
+
+      <div class="nav">
+      <div class="sidebar">
+         <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fa fa-arrow-left"></i>
+            </div>
+            <ul class="list-unstyled components" >
+                <li class="active">
+                    <a href="{{url_for('index')}}">Home</a>
+                </li>
+                <li>
+                    <a href="{{url_for('index')}}#about">About</a>
+                </li>
+                <li>
+                    <a href="{{url_for('index')}}#why_choose_us">Features</a>
+                </li>
+                <li>
+                    <a href="{{url_for('index')}}#testimonial">Testimonial</a>
+                </li>
+                <li>
+                    <a href="{{url_for('index')}}#contact">Contact</a>
+                </li>
+                <li>
+                    <a href="{{url_for('visualization')}}">Visualization</a>
+                </li>
+            </ul>
+
+        </nav>
+      </div>
+
+
+
+
+      <div id="contentt">
+
+
+    <div style="color:rgb(0, 0, 3)" >
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <div class="flex flex-wrap w-full bg-gray-100 py-32 px-10 relative mb-4">
+                <div class="w-full object-cover h-full object-center block opacity-25 absolute inset-0">
+            <br><br><br><br><h1><b>Car Price Prediction</b></h1>
+             <h3></h3>
+                    <h3></h3>
+                    <br><br><h3><button class="flex mx-auto mt-20 text-gray-900 bg-indigo-500 border-0 py-3 px-20 focus:outline-none hover:bg-indigo-600 rounded text-lg">{{ prediction_text }}</button><h3>
+            <h4><b>Year</b></h4>
+            <input id="first" name="Year" type="number ">
+                    <h3></h3><h3></h3>
+            <h4><b>Showroom Price(In lakhs)</b></h4><br><input id="second" name="Present_Price" required="required">
+                    <h3></h3><h3></h3>
+            <h4><b>Kilometers Driven</b></h4><input id="third" name="Kms_Driven" required="required">
+                    <h3></h3><h3></h3>
+            <h4><b>Previous Owners(0/1/3)</b></h4><br><input id="fourth" name="Owner" required="required">
+                    <h3></h3><h3></h3>
+            <h4><b>Fuel-type Used</b></h4><br><select name="Fuel_Type_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Diesel">CNG</option>
+            </select>
+                    <h3></h3><h3></h3>
+            <h4><b>Dealer or Individual</b></h4><br><select name="Seller_Type_Individual" id="resea" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select>
+                    <h3></h3><h3></h3>
+            <h4><b>Transmission type</b></h4><br><select name="Transmission_Mannual" id="research" required="required">
+                <option value="Mannual"><b>Manual Car</b></option>
+                <option value="Automatic"><b>Automatic Car</b></option>
+            </select>
+                    <h3></h3><h3></h3>
+            <br><br><button id="sub" type="submit "><b>Predict</b></button>
+            <!--<br><br><br><br><button id="sub" type="submit "><a href="index.html"><b>Back to Home</b></a></button>-->
+
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <!--<br><br><h3><button class="flex mx-auto mt-20 text-gray-900 bg-indigo-500 border-0 py-3 px-20 focus:outline-none hover:bg-indigo-600 rounded text-lg">{{ prediction_text }}</button><h3>-->
+    </div>
+
+
+
+
+
+    <style>
+
+body {font-family: Arial, Helvetica, sans-serif;}
+        body {
+
+            text-align: center;
+            padding: 0px;
+        }
+
+        #research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #fuel {
+            width: 83px;
+            height: 33px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 20px;
+        }
+
+        #fuel:hover {
+            background-color: rgb(26, 130, 148);
+        }
+
+        #research {
+            width: 99px;
+            height: 33px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        #research:hover {
+            background-color: #258097;
+        }
+
+        #resea {
+            width: 89px;
+            height: 33px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        #resea:hover {
+            background-color: rgb(32, 135, 143);
+        }
+
+        #sub {
+            width: 150px;
+            height: 48px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+            background-color:rgb(255, 153, 0);
+        }
+
+        #sub:hover {
+            background-color: darkcyan;
+        }
+
+        #first {
+            border-radius: 8px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #second {
+            border-radius: 8px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #third {
+            border-radius: 8px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #fourth {
+            border-radius: 8px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Javascript files-->
+      <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='js/popper.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='js/bootstrap.bundle.min.js') }}" ></script>
+      <!-- Scrollbar Js Files -->
+      <script src="{{ url_for('static',filename='js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+      <script src="{{ url_for('static',filename='js/custom.js') }}"></script>
+      <script type="text/javascript">
+        $(document).ready(function () {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+      </script>
+
+      <script>
+      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+      // Australia.
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          center: {lat: 40.645037, lng: -73.880224},
+          });
+
+        var image = 'images/location_point.png';
+          var beachMarker = new google.maps.Marker({
+             position: {lat: 40.645037, lng: -73.880224},
+             map: map,
+             icon: image
+          });
+        }
+        </script>
+        <!-- google map js -->
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+
+
+
+</body>
+
+</html>
